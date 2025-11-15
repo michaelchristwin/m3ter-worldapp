@@ -35,7 +35,7 @@ function M3ter() {
           }}
           className="w-full h-12 rounded-xl"
         />
-        <Button className="w-full h-20 rounded-xl bg-green-400!">Pay</Button>
+        <Button className="w-full h-15 rounded-xl bg-green-400!">Pay</Button>
       </div>
     </div>
   );
