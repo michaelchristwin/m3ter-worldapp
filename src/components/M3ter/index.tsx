@@ -19,7 +19,8 @@ function M3ter() {
       <div className="w-full space-y-2">
         <Input
           label="M3ter ID"
-          value={m3terId?.toString()}
+          type="number"
+          value={m3terId || ""}
           onChange={(e) => {
             setM3terId(Number(e.target.value));
           }}
@@ -27,13 +28,14 @@ function M3ter() {
         />
         <Input
           label="Amount"
-          value={amount?.toString()}
+          type="number"
+          value={amount || ""}
           onChange={(e) => {
             setAmount(Number(e.target.value));
           }}
           className="w-full h-15 rounded-xl"
         />
-        <Button className="w-full h-20 rounded-xl">Pay</Button>
+        <Button className="w-full h-20 rounded-xl bg-green-400">Pay</Button>
       </div>
     </div>
   );
