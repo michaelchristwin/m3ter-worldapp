@@ -16,7 +16,7 @@ function M3ter() {
           <M3terHead size={80} seed={m3terId.toString()} />
         )}
       </div>
-      <div className="w-full space-y-2">
+      <div className="w-full space-y-2 h-fit">
         <Input
           label="M3ter ID"
           type="number"
@@ -35,7 +35,7 @@ function M3ter() {
           }}
           className="w-full h-12 rounded-xl"
         />
-        <Button className="w-full h-15 rounded-xl bg-green-400!">Pay</Button>
+        <Button className="w-full h-15 rounded-xl bg-neutral-800!">Pay</Button>
       </div>
     </div>
   );
