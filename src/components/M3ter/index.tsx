@@ -9,30 +9,32 @@ function M3ter() {
   const [amount, setAmount] = useState<number | null>(null);
   return (
     <div className="w-full">
-      {!m3terId ? (
-        <Skeleton className="rounded-full h-10 w-10" />
-      ) : (
-        <M3terHead size={40} seed={m3terId.toString()} />
-      )}
-      <Input
-        label="M3ter ID"
-        type="number"
-        value={m3terId?.toString()}
-        onChange={(e) => {
-          setM3terId(Number(e.target.value));
-        }}
-        className="w-full h-10 rounded-2xl"
-      />
-      <Input
-        label="Amount"
-        value={amount?.toString()}
-        type="number"
-        onChange={(e) => {
-          setAmount(Number(e.target.value));
-        }}
-        className="w-full h-10 rounded-2xl"
-      />
-      <Button>Pay</Button>
+      <div className="w-full flex items-center justify-center">
+        {!m3terId ? (
+          <Skeleton className="rounded-full h-20 w-20" />
+        ) : (
+          <M3terHead size={80} seed={m3terId.toString()} />
+        )}
+      </div>
+      <div className="w-full space-y-2">
+        <Input
+          label="M3ter ID"
+          value={m3terId?.toString()}
+          onChange={(e) => {
+            setM3terId(Number(e.target.value));
+          }}
+          className="w-full h-15 rounded-xl"
+        />
+        <Input
+          label="Amount"
+          value={amount?.toString()}
+          onChange={(e) => {
+            setAmount(Number(e.target.value));
+          }}
+          className="w-full h-15 rounded-xl"
+        />
+        <Button className="w-full h-20 rounded-xl">Pay</Button>
+      </div>
     </div>
   );
 }
